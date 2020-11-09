@@ -13,11 +13,17 @@ class HomeRouter {
         return createViewController()
     }
     
+    private var sourceView: UIViewController?
+    
     
     func createViewController() -> UIViewController {
         let view = HomeView(nibName: "HomeView", bundle: Bundle.main)
         return view
     }
     
+    func setSourceView(_ sourceView: UIViewController?) {
+        guard let view = sourceView else { fatalError("Unknown error") }
+        self.sourceView = view
+    }
     
 }

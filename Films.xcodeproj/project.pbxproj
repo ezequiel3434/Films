@@ -16,6 +16,7 @@
 		379A982A2559ECE7009DD152 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A98282559ECE7009DD152 /* HomeView.swift */; };
 		379A982B2559ECE7009DD152 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379A98292559ECE7009DD152 /* HomeView.xib */; };
 		379A98382559EDB2009DD152 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A98372559EDB2009DD152 /* HomeRouter.swift */; };
+		379A98402559F1E5009DD152 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A983F2559F1E5009DD152 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		379A98282559ECE7009DD152 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		379A98292559ECE7009DD152 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		379A98372559EDB2009DD152 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		379A983F2559F1E5009DD152 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +135,9 @@
 		379A98262559ECB2009DD152 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				379A983D2559F0D3009DD152 /* Model */,
 				379A98322559ED8C009DD152 /* View */,
+				379A983C2559F0AF009DD152 /* ViewModel */,
 				379A98362559ED95009DD152 /* Router */,
 			);
 			path = Home;
@@ -161,6 +165,21 @@
 				379A98372559EDB2009DD152 /* HomeRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		379A983C2559F0AF009DD152 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				379A983F2559F1E5009DD152 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		379A983D2559F0D3009DD152 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +315,7 @@
 				379A982A2559ECE7009DD152 /* HomeView.swift in Sources */,
 				379A98382559EDB2009DD152 /* HomeRouter.swift in Sources */,
 				379A97EB2559EB97009DD152 /* AppDelegate.swift in Sources */,
+				379A98402559F1E5009DD152 /* HomeViewModel.swift in Sources */,
 				379A97ED2559EB97009DD152 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
