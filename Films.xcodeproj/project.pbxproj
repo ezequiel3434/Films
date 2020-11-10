@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,8 @@
 		379A98382559EDB2009DD152 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A98372559EDB2009DD152 /* HomeRouter.swift */; };
 		379A98402559F1E5009DD152 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A983F2559F1E5009DD152 /* HomeViewModel.swift */; };
 		379A9846255A185F009DD152 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A9845255A185F009DD152 /* Constants.swift */; };
+		37B2947A255B4A30006C1952 /* ManagerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B29479255B4A30006C1952 /* ManagerConnections.swift */; };
+		37B2947F255B4B1F006C1952 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2947E255B4B1F006C1952 /* Movies.swift */; };
 		823C859CD0E54291DCDF48EA /* Pods_Films_FilmsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F608C2AFEAA0AB0C2F04940 /* Pods_Films_FilmsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		379A98372559EDB2009DD152 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		379A983F2559F1E5009DD152 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		379A9845255A185F009DD152 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		37B29479255B4A30006C1952 /* ManagerConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerConnections.swift; sourceTree = "<group>"; };
+		37B2947E255B4B1F006C1952 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		7F608C2AFEAA0AB0C2F04940 /* Pods_Films_FilmsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Films_FilmsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F71715AE536D3260235DD6 /* Pods-Films-FilmsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Films-FilmsUITests.release.xcconfig"; path = "Target Support Files/Pods-Films-FilmsUITests/Pods-Films-FilmsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		934CEE809990DB359BB0DFCD /* Pods-Films.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Films.release.xcconfig"; path = "Target Support Files/Pods-Films/Pods-Films.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				379A97E92559EB97009DD152 /* Films */,
+				37B29478255B49E9006C1952 /* NetworkManager */,
 				379A98002559EB98009DD152 /* FilmsTests */,
 				379A980B2559EB98009DD152 /* FilmsUITests */,
 				379A97E82559EB97009DD152 /* Products */,
@@ -198,6 +203,7 @@
 		379A983D2559F0D3009DD152 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37B2947E255B4B1F006C1952 /* Movies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +214,14 @@
 				379A9845255A185F009DD152 /* Constants.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		37B29478255B49E9006C1952 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				37B29479255B4A30006C1952 /* ManagerConnections.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		EAE553AECB97C5DACCA0B86D /* Frameworks */ = {
@@ -230,7 +244,6 @@
 				366DAA916EB924C3F38A38CA /* Pods-FilmsTests.debug.xcconfig */,
 				A09A563C54DF207F0EC894D7 /* Pods-FilmsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -474,7 +487,9 @@
 			files = (
 				379A982A2559ECE7009DD152 /* HomeView.swift in Sources */,
 				379A98382559EDB2009DD152 /* HomeRouter.swift in Sources */,
+				37B2947F255B4B1F006C1952 /* Movies.swift in Sources */,
 				379A97EB2559EB97009DD152 /* AppDelegate.swift in Sources */,
+				37B2947A255B4A30006C1952 /* ManagerConnections.swift in Sources */,
 				379A98402559F1E5009DD152 /* HomeViewModel.swift in Sources */,
 				379A97ED2559EB97009DD152 /* SceneDelegate.swift in Sources */,
 				379A9846255A185F009DD152 /* Constants.swift in Sources */,
