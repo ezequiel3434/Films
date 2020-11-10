@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="Films" customModuleProvider="target">
             <connections>
+                <outlet property="activity" destination="lLX-xo-pRT" id="qpR-Sq-oda"/>
+                <outlet property="tableView" destination="uUi-6n-Ka0" id="zIr-yb-9kK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,17 +20,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Movies App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9n-te-vbq">
-                    <rect key="frame" x="146" y="140" width="123" height="21"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uUi-6n-Ka0">
+                    <rect key="frame" x="0.0" y="0.0" width="422" height="896"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lLX-xo-pRT">
+                    <rect key="frame" x="188.5" y="288" width="37" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="PYe-cn-Z97"/>
+                        <constraint firstAttribute="height" constant="37" id="USq-Jr-hp8"/>
+                    </constraints>
+                    <color key="color" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="142" y="137"/>
+            <constraints>
+                <constraint firstItem="lLX-xo-pRT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="244" id="JaG-em-Elj"/>
+                <constraint firstItem="lLX-xo-pRT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vaW-lb-oas"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="136.60714285714286"/>
         </view>
     </objects>
     <resources>

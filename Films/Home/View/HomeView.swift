@@ -9,6 +9,8 @@ import UIKit
 
 class HomeView: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     private var router = HomeRouter()
     private var viewModel = HomeViewModel()
     
@@ -20,14 +22,18 @@ class HomeView: UIViewController {
     }
 
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
+extension HomeView: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UITableViewCell
+        return cell
+    }
+    
+     
 }
