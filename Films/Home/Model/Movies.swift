@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movies {
+struct Movies: Codable {
     let listOfMovies: [Movie]
     
     enum CodingKeys: String, CodingKey {
@@ -16,6 +16,7 @@ struct Movies {
 }
 
 struct Movie: Codable {
+    
     let title: String
     let popularity: Double
     let movieID: Int
@@ -29,7 +30,7 @@ struct Movie: Codable {
     enum CodingKeys: String, CodingKey {
         case title
         case popularity
-        case movieId = "id"
+        case movieID = "id"
         case voteCount = "vote_count"
         case originalTitle = "original_title"
         case voteAverage = "vote_average"
