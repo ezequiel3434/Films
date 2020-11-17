@@ -24,6 +24,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="422" height="896"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="TBg-yZ-mxA"/>
+                        <outlet property="delegate" destination="-1" id="QnO-Pz-52T"/>
+                    </connections>
                 </tableView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lLX-xo-pRT">
                     <rect key="frame" x="188.5" y="288" width="37" height="37"/>
