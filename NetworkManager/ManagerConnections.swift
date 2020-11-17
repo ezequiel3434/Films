@@ -17,7 +17,7 @@ class ManagerConnections {
             
             
             let session = URLSession.shared
-            var request = URLRequest(url: URL(string: Constants.URL.main+Constants.EndPoints.urlListPopularMobies+Constants.apiKey)!)
+            var request = URLRequest(url: URL(string: Constants.URL.main+Constants.EndPoints.urlListPopularMobies+"?api_key="+Constants.apiKey)!)
             request.httpMethod = "GET"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             

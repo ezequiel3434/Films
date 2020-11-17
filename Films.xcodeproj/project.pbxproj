@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E4DAD3B2146A3CAAF7FAF81 /* Pods_FilmsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DC3FB275958AB2E4489AE2 /* Pods_FilmsTests.framework */; };
 		3599C21B26CD9D57C422B87C /* Pods_Films.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E55193F2A0827416F7C1B4 /* Pods_Films.framework */; };
+		37367EF8256349CD00B3DF73 /* CustomMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37367EF6256349CD00B3DF73 /* CustomMovieCell.swift */; };
+		37367EF9256349CD00B3DF73 /* CustomMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37367EF7256349CD00B3DF73 /* CustomMovieCell.xib */; };
 		379A97EB2559EB97009DD152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A97EA2559EB97009DD152 /* AppDelegate.swift */; };
 		379A97ED2559EB97009DD152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A97EC2559EB97009DD152 /* SceneDelegate.swift */; };
 		379A97F42559EB98009DD152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379A97F32559EB98009DD152 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		07DC3FB275958AB2E4489AE2 /* Pods_FilmsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E55193F2A0827416F7C1B4 /* Pods_Films.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Films.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		366DAA916EB924C3F38A38CA /* Pods-FilmsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmsTests.debug.xcconfig"; path = "Target Support Files/Pods-FilmsTests/Pods-FilmsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		37367EF6256349CD00B3DF73 /* CustomMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMovieCell.swift; sourceTree = "<group>"; };
+		37367EF7256349CD00B3DF73 /* CustomMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMovieCell.xib; sourceTree = "<group>"; };
 		379A97E72559EB97009DD152 /* Films.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Films.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379A97EA2559EB97009DD152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		379A97EC2559EB97009DD152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37367EF52563499800B3DF73 /* CustomMovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				37367EF6256349CD00B3DF73 /* CustomMovieCell.swift */,
+				37367EF7256349CD00B3DF73 /* CustomMovieCell.xib */,
+			);
+			path = CustomMovieCell;
+			sourceTree = "<group>";
+		};
 		379A97DE2559EB97009DD152 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +191,7 @@
 		379A98322559ED8C009DD152 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37367EF52563499800B3DF73 /* CustomMovieCell */,
 				379A98282559ECE7009DD152 /* HomeView.swift */,
 				379A98292559ECE7009DD152 /* HomeView.xib */,
 			);
@@ -358,6 +372,7 @@
 				379A97F72559EB98009DD152 /* LaunchScreen.storyboard in Resources */,
 				379A97F42559EB98009DD152 /* Assets.xcassets in Resources */,
 				379A982B2559ECE7009DD152 /* HomeView.xib in Resources */,
+				37367EF9256349CD00B3DF73 /* CustomMovieCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +505,7 @@
 				37B2947F255B4B1F006C1952 /* Movies.swift in Sources */,
 				379A97EB2559EB97009DD152 /* AppDelegate.swift in Sources */,
 				37B2947A255B4A30006C1952 /* ManagerConnections.swift in Sources */,
+				37367EF8256349CD00B3DF73 /* CustomMovieCell.swift in Sources */,
 				379A98402559F1E5009DD152 /* HomeViewModel.swift in Sources */,
 				379A97ED2559EB97009DD152 /* SceneDelegate.swift in Sources */,
 				379A9846255A185F009DD152 /* Constants.swift in Sources */,
