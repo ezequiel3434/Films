@@ -27,6 +27,7 @@ class HomeView: UIViewController {
     
     private func configureTableView(){
         tableView.rowHeight = UITableView.automaticDimension
+        
         tableView.register(UINib(nibName: "CustomMovieCell", bundle: nil), forCellReuseIdentifier: "CustomMovieCell")
     }
 

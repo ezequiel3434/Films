@@ -20,9 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uUi-6n-Ka0">
-                    <rect key="frame" x="0.0" y="0.0" width="422" height="896"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uUi-6n-Ka0">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="TBg-yZ-mxA"/>
@@ -42,7 +41,11 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="lLX-xo-pRT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="244" id="JaG-em-Elj"/>
+                <constraint firstAttribute="bottom" secondItem="uUi-6n-Ka0" secondAttribute="bottom" id="RBu-6t-F03"/>
+                <constraint firstAttribute="trailing" secondItem="uUi-6n-Ka0" secondAttribute="trailing" id="h0v-Xh-3yu"/>
+                <constraint firstItem="uUi-6n-Ka0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vKf-MQ-jPo"/>
                 <constraint firstItem="lLX-xo-pRT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vaW-lb-oas"/>
+                <constraint firstItem="uUi-6n-Ka0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zcE-7q-gHt"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="136.60714285714286"/>
         </view>

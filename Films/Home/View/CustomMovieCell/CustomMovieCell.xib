@@ -25,7 +25,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0R-nx-fO3">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0R-nx-fO3">
                         <rect key="frame" x="154" y="55" width="150" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="s8k-Eb-ZH3"/>
@@ -44,7 +44,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-Ra-7xt">
-                        <rect key="frame" x="154" y="119" width="150" height="63"/>
+                        <rect key="frame" x="154" y="119" width="166" height="63"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="63" id="CKL-sj-lZg"/>
                         </constraints>
@@ -59,6 +59,7 @@
                         </constraints>
                     </imageView>
                 </subviews>
+                <viewLayoutGuide key="safeArea" id="zh0-fi-4J6"/>
                 <constraints>
                     <constraint firstItem="oVF-Ra-7xt" firstAttribute="top" secondItem="Gpn-SB-Y9G" secondAttribute="bottom" constant="8" id="0Vx-NF-9nr"/>
                     <constraint firstItem="I0R-nx-fO3" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="3Y7-Is-bKv"/>
@@ -68,8 +69,8 @@
                     <constraint firstItem="8FR-oR-O1P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="C9X-gx-ZSh"/>
                     <constraint firstItem="oVF-Ra-7xt" firstAttribute="leading" secondItem="8FR-oR-O1P" secondAttribute="trailing" constant="18" id="Cix-Bb-r8S"/>
                     <constraint firstItem="8FR-oR-O1P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="D2H-uF-86j"/>
-                    <constraint firstItem="oVF-Ra-7xt" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Fx1-cD-GBh"/>
                     <constraint firstItem="oVF-Ra-7xt" firstAttribute="top" secondItem="Gpn-SB-Y9G" secondAttribute="bottom" constant="8" id="KhD-ed-BJl"/>
+                    <constraint firstItem="zh0-fi-4J6" firstAttribute="trailing" secondItem="oVF-Ra-7xt" secondAttribute="trailing" id="PcZ-9n-GOU"/>
                     <constraint firstAttribute="bottomMargin" secondItem="oVF-Ra-7xt" secondAttribute="bottom" constant="7" id="RHV-rj-87W"/>
                     <constraint firstItem="Gpn-SB-Y9G" firstAttribute="top" secondItem="I0R-nx-fO3" secondAttribute="bottom" constant="18" id="RX9-rP-eJS"/>
                     <constraint firstItem="2Rl-mF-0ub" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="aPA-3L-5mt"/>
