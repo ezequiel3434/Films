@@ -66,6 +66,7 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CustomMovieCell.self)) as! CustomMovieCell
+        cell.imageMovie.imageFromServerURL(urlString: Constants.URL.images+self.movies[indexPath.row].image, placeholderImage: UIImage(named: "claqueta")!)
         cell.titleMovie.text = movies[indexPath.row].title
         cell.descriptionMovie.text = movies[indexPath.row].sinposis
         
