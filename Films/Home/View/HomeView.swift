@@ -11,8 +11,8 @@ import RxCocoa
 
 class HomeView: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activity: UIActivityIndicatorView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var activity: UIActivityIndicatorView!
     private var router = HomeRouter()
     private var viewModel = HomeViewModel()
     private var disposeBag = DisposeBag()
