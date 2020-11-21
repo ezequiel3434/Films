@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewView: UIViewController {
+class DetailView: UIViewController {
 
     @IBOutlet private weak var titleHeader: UILabel!
     @IBOutlet private weak var imageFilm: UIImageView!
