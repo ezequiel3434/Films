@@ -32,9 +32,11 @@ class HomeView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "The movies App"
         configureTableView()
         viewModel.bind(view: self, router: router)
         getData()
+        manageSearchBarController()
         
     }
     
@@ -82,7 +84,7 @@ class HomeView: UIViewController {
             .subscribe(onNext: { (result) in
                 self.filteredMovies = self.movies.filter({ (movie) in
                     
-                    self.tableView.reloadData()
+                    self.reloadTableView()
                     return movie.title.contains(result)
                 })
                 
@@ -95,15 +97,25 @@ class HomeView: UIViewController {
 
 extension HomeView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return filteredMovies.count
+        } else {
+            return movies.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CustomMovieCell.self)) as! CustomMovieCell
-        cell.imageMovie.imageFromServerURL(urlString: Constants.URL.images+self.movies[indexPath.row].image, placeholderImage: UIImage(named: "claqueta")!)
-        cell.titleMovie.text = movies[indexPath.row].title
-        cell.descriptionMovie.text = movies[indexPath.row].sinposis
-        
+        if searchController.isActive && searchController.searchBar.text != "" {
+        cell.imageMovie.imageFromServerURL(urlString: Constants.URL.images+self.filteredMovies[indexPath.row].image, placeholderImage: UIImage(named: "claqueta")!)
+        cell.titleMovie.text = filteredMovies[indexPath.row].title
+        cell.descriptionMovie.text = filteredMovies[indexPath.row].sinposis
+        } else {
+            cell.imageMovie.imageFromServerURL(urlString: Constants.URL.images+self.movies[indexPath.row].image, placeholderImage: UIImage(named: "claqueta")!)
+            cell.titleMovie.text = movies[indexPath.row].title
+            cell.descriptionMovie.text = movies[indexPath.row].sinposis
+        }
         return cell
     }
     
