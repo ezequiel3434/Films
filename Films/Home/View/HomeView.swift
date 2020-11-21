@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class HomeView: UIViewController {
 
@@ -16,6 +17,18 @@ class HomeView: UIViewController {
     private var viewModel = HomeViewModel()
     private var disposeBag = DisposeBag()
     private var movies = [Movie]()
+    private var filteredMovies = [Movie]()
+    
+    lazy var searchController: UISearchController = ({
+        let controller = UISearchController(searchResultsController: nil)
+        controller.hidesNavigationBarDuringPresentation = true
+        controller.obscuresBackgroundDuringPresentation = false
+        controller.searchBar.sizeToFit()
+        controller.searchBar.barStyle = .black
+        controller.searchBar.backgroundColor = .clear
+        controller.searchBar.placeholder = "Buscar una pelicula"
+        return controller
+    })()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +69,27 @@ class HomeView: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    private func manageSearchBarController() {
+        let searchBar = searchController.searchBar
+        searchController.delegate = self
+        tableView.tableHeaderView = searchBar
+        tableView.contentOffset = CGPoint(x: 0, y: searchBar.frame.size.height)
+        
+        searchBar.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .subscribe(onNext: { (result) in
+                self.filteredMovies = self.movies.filter({ (movie) in
+                    
+                    self.tableView.reloadData()
+                    return movie.title.contains(result)
+                })
+                
+            })
+            .disposed(by: disposeBag)
+
+    }
 }
 
 
@@ -77,4 +111,12 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         return 200
     }
      
+}
+
+
+extension HomeView: UISearchControllerDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchController.isActive = false
+        reloadTableView()
+    }
 }
