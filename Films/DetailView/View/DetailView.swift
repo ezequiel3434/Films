@@ -32,8 +32,9 @@ class DetailView: UIViewController {
     func showMovieData(movie: MovieDetail) {
         DispatchQueue.main.async {
             self.titleHeader.text = movie.title
-            self.imageFilm.imageFromServerURL(urlString: Constants.URL.images+movie.posterPath, placeholderImage: UIImage(named: "claquta")!)
+            self.imageFilm.imageFromServerURL(urlString: Constants.URL.images+movie.posterPath, placeholderImage: UIImage(named: "claqueta")!)
             self.descriptionMovie.text = movie.overview
+            self.originalTitle.text = movie.originalTitle
             self.releaseDate.text = movie.releaseDate
             self.voteAverage.text = String(movie.voteAverage)
         }

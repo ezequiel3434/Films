@@ -27,6 +27,7 @@ class DetailRouter {
     
     func createViewController() -> UIViewController {
         let view = DetailView(nibName: "DetailView", bundle: Bundle.main)
+        view.movieID = self.movieID
         return view
     }
     
