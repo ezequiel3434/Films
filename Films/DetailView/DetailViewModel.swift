@@ -17,10 +17,11 @@ class DetailViewModel {
         self.view = view
         self.router = router
         //TODO: Setear la vista en el router
+        self.router?.setSourceView(view)
     }
     
     func getMovieData(movieID: String) -> Observable<MovieDetail> {
-        
+        return managerConnections.getDetailMovies(movieID: movieID)
     }
     
 }

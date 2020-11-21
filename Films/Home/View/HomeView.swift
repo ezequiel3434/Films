@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class HomeView: UIViewController {
-
+    
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var activity: UIActivityIndicatorView!
     private var router = HomeRouter()
@@ -45,13 +45,13 @@ class HomeView: UIViewController {
         
         tableView.register(UINib(nibName: "CustomMovieCell", bundle: nil), forCellReuseIdentifier: "CustomMovieCell")
     }
-
+    
     private func getData(){
         return viewModel.getListMoviesData()
-        // manejar concurrencia o hilos de RxSwift
+            // manejar concurrencia o hilos de RxSwift
             .subscribe(on: MainScheduler.instance)
             .observe(on: MainScheduler.instance)
-        // suscribirme a el observable
+            // suscribirme a el observable
             .subscribe { (movies) in
                 self.movies = movies
                 self.reloadTableView()
@@ -59,7 +59,7 @@ class HomeView: UIViewController {
                 print(error.localizedDescription)
             } onCompleted: {
             }.disposed(by: disposeBag)
-
+        
         // Dar por completado la secuencia de RxSwift
         
     }
@@ -90,7 +90,7 @@ class HomeView: UIViewController {
                 
             })
             .disposed(by: disposeBag)
-
+        
     }
 }
 
@@ -108,9 +108,9 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CustomMovieCell.self)) as! CustomMovieCell
         if searchController.isActive && searchController.searchBar.text != "" {
-        cell.imageMovie.imageFromServerURL(urlString: Constants.URL.images+self.filteredMovies[indexPath.row].image, placeholderImage: UIImage(named: "claqueta")!)
-        cell.titleMovie.text = filteredMovies[indexPath.row].title
-        cell.descriptionMovie.text = filteredMovies[indexPath.row].sinposis
+            cell.imageMovie.imageFromServerURL(urlString: Constants.URL.images+self.filteredMovies[indexPath.row].image, placeholderImage: UIImage(named: "claqueta")!)
+            cell.titleMovie.text = filteredMovies[indexPath.row].title
+            cell.descriptionMovie.text = filteredMovies[indexPath.row].sinposis
         } else {
             cell.imageMovie.imageFromServerURL(urlString: Constants.URL.images+self.movies[indexPath.row].image, placeholderImage: UIImage(named: "claqueta")!)
             cell.titleMovie.text = movies[indexPath.row].title
@@ -122,7 +122,16 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
-     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if searchController.isActive && searchController.searchBar.text != "" {
+            viewModel.makeDetailView(movieID: String(self.filteredMovies[indexPath.row].movieID))
+        } else {
+            viewModel.makeDetailView(movieID: String(self.movies[indexPath.row].movieID))
+            
+        }
+    }
+    
 }
 
 

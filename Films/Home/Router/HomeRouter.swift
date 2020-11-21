@@ -26,4 +26,8 @@ class HomeRouter {
         self.sourceView = view
     }
     
+    func navigateToDetailView(movieID: String) {
+        let detailView = DetailRouter(movieID: movieID).viewCOntgroller
+        sourceView?.navigationController?.pushViewController(detailView, animated: true)
+    }
 }

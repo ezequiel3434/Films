@@ -13,10 +13,10 @@ class DetailRouter {
         return createViewController()
     }
     
-    var movieID: String
+    var movieID: String?
     private var sourceView: UIViewController?
     
-    init(movieID: String) {
+    init(movieID: String? = "") {
         self.movieID = movieID
     }
     
@@ -26,7 +26,7 @@ class DetailRouter {
     }
     
     func createViewController() -> UIViewController {
-        let view = HomeView(nibName: "DetailView", bundle: Bundle.main)
+        let view = DetailView(nibName: "DetailView", bundle: Bundle.main)
         return view
     }
     

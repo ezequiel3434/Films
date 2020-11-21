@@ -25,4 +25,8 @@ class HomeViewModel {
         return managerConnections.getPopularMovies()
     }
     
+    func makeDetailView(movieID: String) {
+        router?.navigateToDetailView(movieID: movieID)
+    }
+    
 }
